@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  /* Shared form control treatment — one border/radius/focus style everywhere,
+     so every input, select, and textarea gets the same accessible focus ring
+     (WCAG AA) instead of relying on the browser's unstyled default outline. */
+  .form-input {
+    @apply w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 transition-colors placeholder:text-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none;
+  }
+
+  /* One card treatment for both screens: separates the interactive form from
+     the page background instead of everything floating flat on white. */
+  .card {
+    @apply rounded-lg border border-gray-100 bg-white p-6 shadow-sm;
+  }
+
+  .btn-primary {
+    @apply rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none disabled:hover:bg-blue-600 disabled:opacity-50;
+  }
+}
