@@ -30,3 +30,6 @@ next-env.d.ts
 
 # bkit (local tooling state/audit logs, not part of the app)
 .bkit
+
+.vercel
+.env*
